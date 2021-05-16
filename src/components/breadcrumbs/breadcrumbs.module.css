@@ -1,7 +1,6 @@
 .breadcrumb__list {
   display: flex;
   list-style: none;
-  padding: 0 1rem;
 }
 
 .breadcrumb_listitem {

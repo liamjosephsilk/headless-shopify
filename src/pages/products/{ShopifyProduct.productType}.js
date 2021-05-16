@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout/layout"
+import SectionTitle from "../../components/sectionTitle/sectionTitle"
 
 export const query = graphql`
   query productTypeQuery($productType: String) {
@@ -32,7 +33,7 @@ const ProductTypePage = ({ pageContext }) => {
   const pageTitle = pageContext.productType
   return (
     <Layout>
-      <h1>{pageTitle}</h1>
+      <SectionTitle title={pageTitle} subtitle="Discover" />
     </Layout>
   )
 }

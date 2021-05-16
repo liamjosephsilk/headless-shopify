@@ -1,0 +1,14 @@
+.productquantity {
+  display: flex;
+  width: 130px;
+  justify-content: space-between;
+  background: lightgrey;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.productquantity__quantity {
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}

@@ -1,0 +1,17 @@
+.sectiontitle {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.sectiontitle__title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sectiontitle__subtitle {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
