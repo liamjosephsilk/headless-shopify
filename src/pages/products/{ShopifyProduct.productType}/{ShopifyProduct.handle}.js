@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { productpage } from "./productPage.module.css"
+
 import Layout from "../../../components/layout/layout"
 
 export const query = graphql`
@@ -8,6 +10,15 @@ export const query = graphql`
     shopifyProduct(id: { eq: $id }) {
       id
       title
+      handle
+      variants {
+        price
+        storefrontId
+      }
+      featuredImage {
+        gatsbyImageData(placeholder: "BLURRED", layout: CONSTRAINED)
+      }
+      vendor
     }
   }
 `
@@ -15,7 +26,12 @@ export const query = graphql`
 const ProductPage = ({ data: product }) => {
   return (
     <Layout>
-      <h1>{product.shopifyProduct.title}</h1>
+      <div className={productpage}>
+        <div></div>
+        <div>
+          <h1>Second Column</h1>
+        </div>
+      </div>
     </Layout>
   )
 }
