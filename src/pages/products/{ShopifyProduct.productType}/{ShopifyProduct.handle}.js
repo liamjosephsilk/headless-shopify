@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import Layout from "../../../components/layout/layout"
+
 export const query = graphql`
   query($id: String = "") {
     shopifyProduct(id: { eq: $id }) {
@@ -12,9 +14,9 @@ export const query = graphql`
 
 const ProductPage = ({ data: product }) => {
   return (
-    <div>
+    <Layout>
       <h1>{product.shopifyProduct.title}</h1>
-    </div>
+    </Layout>
   )
 }
 
