@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import { productcard, productCard__image } from "./productCard.module.css"
+import { productcard } from "./productCard.module.css"
 
 import ProductCardOverlay from "./productCardOverlay"
 
@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className={productcard} ref={cardRef}>
-      <div className={productCard__image}>
+      <div>
         <GatsbyImage image={product.featuredImage.gatsbyImageData} />
       </div>
       {isOverlay ? (
