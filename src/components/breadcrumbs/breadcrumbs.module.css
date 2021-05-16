@@ -1,0 +1,16 @@
+.breadcrumb__list {
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumb_listitem {
+  margin-right: 0.5rem;
+}
+
+.breadcrumb_listitem::after {
+  content: "  /";
+}
+
+.breadcrumb_listitem:last-child::after {
+  content: "";
+}

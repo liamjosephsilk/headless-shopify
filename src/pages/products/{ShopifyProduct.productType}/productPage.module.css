@@ -1,0 +1,28 @@
+.productpage {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-gap: 40px;
+  padding: 4rem;
+  background: white;
+}
+
+.productpage__title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.productpage__price {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.productpage__info {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.producpage__content {
+  width: 60%;
+}
