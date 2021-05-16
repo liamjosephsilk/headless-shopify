@@ -1,7 +1,9 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Seo from "../components/seo"
+import Layout from "../components/layout/layout"
+import ProductList from "../components/productList/productList"
 
 export const ProductQuery = graphql`
   query allProducts {
@@ -18,7 +20,7 @@ export const ProductQuery = graphql`
             storefrontId
           }
           featuredImage {
-            gatsbyImageData(placeholder: "BLURRED")
+            gatsbyImageData(placeholder: "BLURRED", layout: CONSTRAINED)
           }
         }
       }
@@ -27,20 +29,10 @@ export const ProductQuery = graphql`
 `
 
 const IndexPage = data => (
-  <div>
+  <Layout>
     <Seo title="Home" />
-    <h1>Home Page</h1>
-    {data.data.allShopifyProduct.edges.map(({ node: product }) => (
-      <div>
-        <p>{product.title}</p>
-        <Link
-          to={`products/${product.productType.toLowerCase()}/${product.handle}`}
-        >
-          {product.title}
-        </Link>
-      </div>
-    ))}
-  </div>
+    <ProductList products={data.data.allShopifyProduct} />
+  </Layout>
 )
 
 export default IndexPage

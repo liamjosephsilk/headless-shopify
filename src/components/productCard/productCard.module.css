@@ -1,0 +1,62 @@
+.productcard {
+  height: 500px;
+  background: white;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.productcardoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.productcardoverlay__title {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.productcardoverlay__vendor {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.productcardoverlay__price {
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: rgba(219, 39, 119);
+  margin-top: 2rem;
+}
+
+.productcard__image {
+  background: yellow;
+  width: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  .productcard {
+    height: 600px;
+    padding: 8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productcard {
+    height: 600px;
+    padding: 12rem;
+  }
+}

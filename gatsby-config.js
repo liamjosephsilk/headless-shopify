@@ -15,6 +15,7 @@ module.exports = {
         storeUrl: process.env.SHOPIFY_STORE_URL,
       },
     },
+    `@chakra-ui/gatsby-plugin`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

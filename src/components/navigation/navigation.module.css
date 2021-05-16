@@ -1,0 +1,8 @@
+.navigation__list {
+  list-style: none;
+  display: flex;
+}
+
+.navigation__listitem {
+  margin: 0 1rem;
+}

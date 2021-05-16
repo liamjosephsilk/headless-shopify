@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.header__icons {
+  display: flex;
+  list-style: none;
+}
+
+.header__icon {
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+}

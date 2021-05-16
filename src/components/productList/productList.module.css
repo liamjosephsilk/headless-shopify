@@ -1,0 +1,23 @@
+.productlist {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .productlist {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productlist {
+    grid-template-columns: 1fr;
+    padding: 2rem 4rem;
+    grid-gap: 40px;
+  }
+}
