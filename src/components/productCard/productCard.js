@@ -18,13 +18,14 @@ const ProductCard = ({ product }) => {
     })
   }, [])
 
+  const image = product.featuredImage
+    ? product.featuredImage.gatsbyImageData
+    : product.images[0].gatsbyImageData
+
   return (
     <div className={productcard} ref={cardRef}>
       <div>
-        <GatsbyImage
-          image={product.featuredImage.gatsbyImageData}
-          alt={product.title}
-        />
+        <GatsbyImage image={image} alt={product.title} />
       </div>
       {isOverlay ? (
         <ProductCardOverlay

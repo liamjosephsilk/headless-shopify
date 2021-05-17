@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../../components/layout/layout"
-import ProductList from "../../components/productList/productList"
 import SectionTitle from "../../components/sectionTitle/sectionTitle"
+import ProductList from "../../components/productList/productList"
 
 export const query = graphql`
   query productTypeQuery($productType: String) {
@@ -12,14 +12,22 @@ export const query = graphql`
         node {
           id
           title
+          totalInventory
+          storefrontId
           productType
           handle
           variants {
             price
             storefrontId
           }
-          featuredImage {
-            gatsbyImageData(placeholder: "BLURRED", layout: CONSTRAINED)
+          images {
+            gatsbyImageData(
+              height: 800
+              aspectRatio: 4.3
+              width: 500
+              placeholder: "BLURRED"
+              layout: CONSTRAINED
+            )
           }
         }
       }
