@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/layout/layout"
 import SectionTitle from "../../components/sectionTitle/sectionTitle"
+import ProductList from "../../components/productList/productList"
 
 export const query = graphql`
   query productTypeQuery($productType: String) {
@@ -14,6 +15,11 @@ export const query = graphql`
           totalInventory
           storefrontId
           productType
+          handle
+          variants {
+            price
+            storefrontId
+          }
           images {
             gatsbyImageData(
               height: 800
@@ -29,11 +35,13 @@ export const query = graphql`
   }
 `
 
-const ProductTypePage = ({ pageContext }) => {
+const ProductTypePage = ({ pageContext, data: products }) => {
   const pageTitle = pageContext.productType
+
   return (
     <Layout>
       <SectionTitle title={pageTitle} subtitle="Discover" />
+      <ProductList products={products.allShopifyProduct} />
     </Layout>
   )
 }
