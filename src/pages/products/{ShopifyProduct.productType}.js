@@ -12,8 +12,6 @@ export const query = graphql`
         node {
           id
           title
-          totalInventory
-          storefrontId
           productType
           handle
           variants {
