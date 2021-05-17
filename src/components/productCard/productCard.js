@@ -21,7 +21,10 @@ const ProductCard = ({ product }) => {
   return (
     <div className={productcard} ref={cardRef}>
       <div>
-        <GatsbyImage image={product.featuredImage.gatsbyImageData} />
+        <GatsbyImage
+          image={product.featuredImage.gatsbyImageData}
+          alt={product.title}
+        />
       </div>
       {isOverlay ? (
         <ProductCardOverlay

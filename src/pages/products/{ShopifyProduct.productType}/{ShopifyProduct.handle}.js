@@ -51,6 +51,7 @@ const ProductPage = ({ data: product }) => {
           />
           <ProductImage
             image={product.shopifyProduct.featuredImage.gatsbyImageData}
+            alt={product.shopifyProduct.title}
           />
         </div>
         <div className={producpage__content}>

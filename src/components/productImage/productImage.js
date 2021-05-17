@@ -3,10 +3,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import { productimage } from "./productImage.module.css"
 
-const ProductImage = ({ image }) => {
+const ProductImage = ({ image, alt }) => {
   return (
     <section className={productimage}>
-      <GatsbyImage image={image} />
+      <GatsbyImage image={image} alt={alt} />
     </section>
   )
 }
