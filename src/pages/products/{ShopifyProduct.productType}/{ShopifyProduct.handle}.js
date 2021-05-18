@@ -18,7 +18,7 @@ import ProductQuantity from "../../../components/productQuantity/productQuantity
 import Button from "../../../components/button/button"
 
 // Contexts
-import { useAddItemToCart, useCartCount } from "../../../contexts/storeContext"
+import { useAddItemToCart } from "../../../contexts/storeContext"
 
 export const query = graphql`
   query($id: String = "") {
