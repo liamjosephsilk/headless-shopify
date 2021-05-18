@@ -19,3 +19,20 @@
   font-size: 1.2rem;
   margin-right: 1.2rem;
 }
+
+.header__iconcontainer {
+  position: relative;
+  height: 20px;
+  width: 20px;
+}
+
+.header__cartcount {
+  position: absolute;
+  background: red;
+  bottom: -5px;
+  right: -5px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
