@@ -9,11 +9,16 @@ import {
   producpage__content,
 } from "./productPage.module.css"
 
+// Components
+
 import Layout from "../../../components/layout/layout"
 import Breadcrumbs from "../../../components/breadcrumbs/breadcrumbs"
 import ProductImage from "../../../components/productImage/productImage"
 import ProductQuantity from "../../../components/productQuantity/productQuantity"
 import Button from "../../../components/button/button"
+
+// Contexts
+import { useAddItemToCart, useCartCount } from "../../../contexts/storeContext"
 
 export const query = graphql`
   query($id: String = "") {
@@ -36,6 +41,13 @@ export const query = graphql`
 
 const ProductPage = ({ data: product }) => {
   const [quantity, setQuantity] = useState(0)
+  const addToCart = useAddItemToCart()
+  const variant = product.shopifyProduct.variants[0].storefrontId
+
+  const handleAddedToCart = () => {
+    addToCart(variant, quantity)
+    setQuantity(0)
+  }
 
   return (
     <Layout>
@@ -74,7 +86,7 @@ const ProductPage = ({ data: product }) => {
             }
           />
 
-          <Button content="Add to Cart" />
+          <Button content="Add to Cart" handleClick={handleAddedToCart} />
         </div>
       </div>
     </Layout>
