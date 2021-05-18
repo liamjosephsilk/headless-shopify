@@ -20,6 +20,9 @@ export const query = graphql`
             price
             storefrontId
           }
+          featuredImage {
+            gatsbyImageData(placeholder: "BLURRED", layout: CONSTRAINED)
+          }
           images {
             gatsbyImageData(
               height: 800
