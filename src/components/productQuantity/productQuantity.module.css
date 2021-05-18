@@ -12,3 +12,9 @@
   font-size: 1.4rem;
   margin: 0 1rem;
 }
+
+.productquantity__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}

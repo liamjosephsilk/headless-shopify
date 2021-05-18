@@ -5,6 +5,7 @@ import { header, header__title } from "./header.module.css"
 
 import Navigation from "../navigation/navigation"
 import HeaderIcons from "./headerIcons"
+import CartDraw from "../cartDraw/cartDraw"
 
 import { useCartCount } from "../../contexts/storeContext"
 
@@ -18,6 +19,7 @@ const Header = ({ title }) => {
       </Link>
       <Navigation />
       <HeaderIcons count={count} />
+      <CartDraw />
     </header>
   )
 }
