@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FaShoppingCart, FaSearch } from "react-icons/fa"
 
 import {
@@ -14,7 +15,9 @@ const HeaderIcons = ({ count, handleClick }) => {
       <FaSearch className={header__icon} />
 
       <div className={header__iconcontainer} onClick={handleClick}>
-        <FaShoppingCart className={header__icon} />
+        <Link to="/checkout">
+          <FaShoppingCart className={header__icon} />
+        </Link>
         {count === 0 ? <></> : <div className={header__cartcount}></div>}
       </div>
     </ul>

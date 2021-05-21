@@ -1,0 +1,20 @@
+.checkout__container {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-gap: 5%;
+}
+
+.checkout__items {
+  background: white;
+  padding: 2rem;
+}
+
+.checkout__summary {
+  background: white;
+  padding: 2rem 6rem 2rem 2rem;
+  max-height: 16em;
+}
+
+.checkout__summaryTitle {
+  margin-bottom: 2rem;
+}

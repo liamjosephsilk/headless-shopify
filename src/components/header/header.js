@@ -19,7 +19,7 @@ const Header = ({ title }) => {
       </Link>
       <Navigation />
       <HeaderIcons count={count} />
-      <CartDraw />
+      {/* <CartDraw /> */}
     </header>
   )
 }
