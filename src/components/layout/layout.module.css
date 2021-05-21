@@ -4,4 +4,5 @@
 
 .pagecontent {
   background: lightgrey;
+  min-height: 80vh;
 }
