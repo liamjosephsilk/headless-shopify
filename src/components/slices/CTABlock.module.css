@@ -1,0 +1,25 @@
+.CTA {
+  max-width: 1200px;
+  padding: 6rem;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.CTA__text {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .CTA {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .CTA__text {
+    font-size: 1.7rem;
+  }
+}
