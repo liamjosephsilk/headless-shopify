@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: "gatsby-shopify",
+        repositoryName: process.env.PRISMIC_REPO,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         linkResolver: () => linkResolver,
         schemas: {
