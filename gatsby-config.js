@@ -24,6 +24,7 @@ module.exports = {
         linkResolver: () => linkResolver,
         schemas: {
           homepage: require("./custom_types/homepage.json"),
+          page: require("./custom_types/page.json"),
         },
       },
     },
