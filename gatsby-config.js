@@ -1,4 +1,5 @@
 require("dotenv").config()
+const linkResolver = require("./src/utils/linkResolver")
 
 module.exports = {
   siteMetadata: {
@@ -13,6 +14,17 @@ module.exports = {
         apiKey: process.env.SHOPIFY_API_KEY,
         password: process.env.SHOPIFY_SHOP_PASSWORD,
         storeUrl: process.env.SHOPIFY_STORE_URL,
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: "gatsby-shopify",
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        linkResolver: () => linkResolver,
+        schemas: {
+          homepage: require("./custom_types/homepage.json"),
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
