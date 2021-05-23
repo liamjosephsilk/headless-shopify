@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+import { useGetProductQuantity } from "../../../hooks/useGetProductQuantity"
 
 import {
   productpage,
@@ -7,6 +8,7 @@ import {
   productpage__price,
   productpage__info,
   producpage__content,
+  productpage__quantity,
 } from "./productPage.module.css"
 
 // Components
@@ -40,6 +42,10 @@ export const query = graphql`
 `
 
 const ProductPage = ({ data: product }) => {
+  const { data, error, isLoading, isSuccess } = useGetProductQuantity(
+    product.shopifyProduct.handle
+  )
+
   const [quantity, setQuantity] = useState(0)
   const addToCart = useAddItemToCart()
   const variant = product.shopifyProduct.variants[0].storefrontId
@@ -74,6 +80,13 @@ const ProductPage = ({ data: product }) => {
             <p className={productpage__price}>
               {product.shopifyProduct.variants[0].price}
             </p>
+            {data ? (
+              <p className={productpage__quantity}>
+                {data.productByHandle.totalInventory} Left In Stock
+              </p>
+            ) : (
+              <p className={productpage__quantity}></p>
+            )}
           </div>
 
           <ProductQuantity

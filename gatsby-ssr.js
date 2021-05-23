@@ -1,7 +1,15 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from "react"
+import { QueryClient, QueryClientProvider } from "react-query"
 
-// You can delete this file if you're not using it
+import { StoreContextProvider } from "./src/contexts/storeContext"
+import "./src/styles/index.css"
+
+const queryClient = new QueryClient()
+
+export const wrapRootElement = ({ element }) => {
+  return (
+    <StoreContextProvider>
+      <QueryClientProvider client={queryClient}>{element}</QueryClientProvider>
+    </StoreContextProvider>
+  )
+}
