@@ -15,12 +15,14 @@
     "gatsby-source-prismic": "^3.3.6",
     "gatsby-source-shopify": "^5.0.0-rc.22",
     "gatsby-transformer-sharp": "^3.4.0",
+    "graphql-request": "^3.4.0",
     "prismic-reactjs": "^1.3.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-query": "^3.16.0",
     "shopify-buy": "^2.11.0"
   },
   "devDependencies": {
