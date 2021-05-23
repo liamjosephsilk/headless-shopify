@@ -27,13 +27,10 @@ const CheckoutPage = () => {
 
   return (
     <Layout>
-      <div>
-        <h1>Cart 1</h1>
-      </div>
       <div className={checkout__container}>
         <section className={checkout__items}>
           {lineItems.map(item => (
-            <CheckoutItem item={item} />
+            <CheckoutItem key={item.id} item={item} />
           ))}
         </section>
         <section className={checkout__summary}>

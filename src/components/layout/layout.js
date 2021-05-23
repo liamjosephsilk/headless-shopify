@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
   const closeBanner = () => {
     setIsBanner(false)
   }
+
   return (
     <>
       {isBanner ? <Banner handleClose={closeBanner} /> : <></>}
