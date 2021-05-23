@@ -1,7 +1,7 @@
 import React from "react"
 import { RichText } from "prismic-reactjs"
 
-import { CTA, CTA__text, CTA__button } from "./CTABlock.module.css"
+import { CTA, CTA__text } from "./CTABlock.module.css"
 
 import Button from "../button/button"
 
