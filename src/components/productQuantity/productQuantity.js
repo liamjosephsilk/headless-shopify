@@ -10,11 +10,19 @@ import {
 const ProductQuantity = ({ quantity, handleIncrease, handleDecrease }) => {
   return (
     <div className={productquantity}>
-      <button className={productquantity__button} onClick={handleDecrease}>
+      <button
+        className={productquantity__button}
+        aria-label="Increase product quantity"
+        onClick={handleDecrease}
+      >
         <FaMinus />
       </button>
       <p className={productquantity__quantity}>{quantity}</p>
-      <button className={productquantity__button} onClick={handleIncrease}>
+      <button
+        className={productquantity__button}
+        aria-label="Decrease product quantity"
+        onClick={handleIncrease}
+      >
         <FaPlus />
       </button>
     </div>
