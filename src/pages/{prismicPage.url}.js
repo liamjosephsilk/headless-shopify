@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SliceZone from "../components/sliceZone/sliceZone"
+import Seo from "../components/seo"
 
 export const PageQuery = graphql`
   query PageQuery($url: String = "") {
@@ -53,6 +54,10 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        title={page.uid.toUpperCase()}
+        description={`Skate Shop ${page.uid} page`}
+      />
       <h1>{page.uid}</h1>
       <SliceZone sliceZone={document} />
     </Layout>

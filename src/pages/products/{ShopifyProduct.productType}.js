@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout/layout"
 import SectionTitle from "../../components/sectionTitle/sectionTitle"
 import ProductList from "../../components/productList/productList"
+import Seo from "../../components/seo"
 
 export const query = graphql`
   query productTypeQuery($productType: String) {
@@ -40,6 +41,10 @@ const ProductTypePage = ({ pageContext, data: products }) => {
 
   return (
     <Layout>
+      <Seo
+        title={pageTitle.toUpperCase()}
+        description={`All ${pageTitle} products.`}
+      />
       <SectionTitle title={pageTitle} subtitle="Discover" />
       <ProductList products={products.allShopifyProduct} />
     </Layout>

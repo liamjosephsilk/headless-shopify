@@ -18,6 +18,7 @@ import Layout from "../components/layout/layout"
 import CheckoutItem from "../components/checkoutItem/checkoutItem"
 import SummaryDetail from "../components/summaryDetail/summaryDetail"
 import Button from "../components/button/button"
+import Seo from "../components/seo"
 
 const CheckoutPage = () => {
   const checkout = useCheckout()
@@ -27,6 +28,7 @@ const CheckoutPage = () => {
 
   return (
     <Layout>
+      <Seo title="Checkout" description="Skate Shop checkout." />
       <div className={checkout__container}>
         <section className={checkout__items}>
           {lineItems.map(item => (

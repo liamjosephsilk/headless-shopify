@@ -18,6 +18,7 @@ import Breadcrumbs from "../../../components/breadcrumbs/breadcrumbs"
 import ProductImage from "../../../components/productImage/productImage"
 import ProductQuantity from "../../../components/productQuantity/productQuantity"
 import Button from "../../../components/button/button"
+import Seo from "../../../components/seo"
 
 // Contexts
 import { useAddItemToCart } from "../../../contexts/storeContext"
@@ -40,11 +41,9 @@ export const query = graphql`
     }
   }
 `
-
 const ProductPage = ({ data: product }) => {
-  const { data, error, isLoading, isSuccess } = useGetProductQuantity(
-    product.shopifyProduct.handle
-  )
+  // can return error, isLoading, isSuccess
+  const { data } = useGetProductQuantity(product.shopifyProduct.handle)
 
   const [quantity, setQuantity] = useState(0)
   const addToCart = useAddItemToCart()
@@ -57,6 +56,10 @@ const ProductPage = ({ data: product }) => {
 
   return (
     <Layout>
+      <Seo
+        title={product.shopifyProduct.title}
+        description={`${product.shopifyProduct.title} product.`}
+      />
       <div className={productpage}>
         <div>
           <Breadcrumbs

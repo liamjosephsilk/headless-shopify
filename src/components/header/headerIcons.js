@@ -11,16 +11,16 @@ import {
 
 const HeaderIcons = ({ count, handleClick }) => {
   return (
-    <ul className={header__icons}>
+    <div className={header__icons}>
       <FaSearch className={header__icon} />
 
       <div className={header__iconcontainer} onClick={handleClick}>
-        <Link to="/checkout">
+        <Link to="/checkout" aria-label="Buy products from checkout.">
           <FaShoppingCart className={header__icon} />
         </Link>
         {count === 0 ? <></> : <div className={header__cartcount}></div>}
       </div>
-    </ul>
+    </div>
   )
 }
 
