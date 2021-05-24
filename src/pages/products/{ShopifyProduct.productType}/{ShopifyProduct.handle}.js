@@ -41,11 +41,9 @@ export const query = graphql`
     }
   }
 `
-
 const ProductPage = ({ data: product }) => {
-  const { data, error, isLoading, isSuccess } = useGetProductQuantity(
-    product.shopifyProduct.handle
-  )
+  // can return error, isLoading, isSuccess
+  const { data } = useGetProductQuantity(product.shopifyProduct.handle)
 
   const [quantity, setQuantity] = useState(0)
   const addToCart = useAddItemToCart()
