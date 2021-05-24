@@ -16,13 +16,18 @@ const Navigation = () => {
 
   return (
     <nav>
-      <ul className={navigation__list}>
+      <div className={navigation__list}>
         {productTypes.map((name, index) => (
-          <li className={navigation__listitem} key={index}>
-            <Link to={`/products/${name.toLowerCase()}`}>{name}</Link>
-          </li>
+          <div className={navigation__listitem} key={index}>
+            <Link
+              to={`/products/${name.toLowerCase()}`}
+              aria-label={`Go to ${name} products`}
+            >
+              {name}
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </nav>
   )
 }

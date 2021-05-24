@@ -31,7 +31,7 @@ export const ProductQuery = graphql`
 
 const IndexPage = data => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Home" description="Skate Shop all products." />
     <SectionTitle title="New In" subtitle="Discover" />
     <ProductList products={data.data.allShopifyProduct} />
   </Layout>
