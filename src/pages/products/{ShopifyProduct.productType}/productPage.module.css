@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1.2fr;
   grid-gap: 40px;
   padding: 4rem;
-  background: white;
+  background: green;
 }
 
 .productpage__title {
